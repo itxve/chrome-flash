@@ -21,7 +21,8 @@ RUN \
     util-linux-misc \
     xfce4 \
     xfce4-terminal && \
-  apk add --no-cache chromium --repository https://dl-cdn.alpinelinux.org/alpine/v3.11/community/ && \
+  wget -P /tmp https://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/chromium-81.0.4044.113-r0.apk && \
+  apk add --allow-untrusted /tmp/chromium-81.0.4044.113-r0.apk && \
   echo "**** application tweaks ****" && \
   sed -i \
     's#^Exec=.*#Exec=/usr/local/bin/wrapped-chromium#g' \
