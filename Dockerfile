@@ -10,7 +10,9 @@ LABEL maintainer="thelamer"
 
 RUN \
   echo "**** install packages ****" && \
+  apk update && \
   apk add --no-cache \
+    chromium \
     faenza-icon-theme \
     faenza-icon-theme-xfce4-appfinder \
     faenza-icon-theme-xfce4-panel \
@@ -20,8 +22,6 @@ RUN \
     util-linux-misc \
     xfce4 \
     xfce4-terminal && \
-  apk add --no-cache -X https://dl-cdn.alpinelinux.org/alpine/v3.11/community \  
-    chromium=81.0.4044.113-r0 && \
   echo "**** application tweaks ****" && \
   sed -i \
     's#^Exec=.*#Exec=/usr/local/bin/wrapped-chromium#g' \
