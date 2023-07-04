@@ -12,7 +12,6 @@ RUN \
   echo "**** install packages ****" && \
   apk update && \
   apk add --no-cache \
-    chromium \
     faenza-icon-theme \
     faenza-icon-theme-xfce4-appfinder \
     faenza-icon-theme-xfce4-panel \
@@ -22,6 +21,7 @@ RUN \
     util-linux-misc \
     xfce4 \
     xfce4-terminal && \
+  apk add --no-cache chromium --repository https://dl-cdn.alpinelinux.org/alpine/v3.11/community/ \
   echo "**** application tweaks ****" && \
   sed -i \
     's#^Exec=.*#Exec=/usr/local/bin/wrapped-chromium#g' \
