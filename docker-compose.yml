@@ -1,0 +1,24 @@
+version: "3"
+services:
+  webtop:
+    build:
+      dockerfile: Dockerfile.aarch64
+    container_name: local-webtop
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    volumes:
+      - ./:/config
+      - /var/run/docker.sock:/var/run/docker.sock #optional
+    ports:
+      - 9900:3000
+      # - 8001:3001
+    # devices:
+      # - /dev/dri:/dev/dri #optional
+    shm_size: "1gb" #optional
+    restart: unless-stopped
