@@ -21,7 +21,7 @@ RUN \
     util-linux-misc \
     xfce4 \
     xfce4-terminal && \
-  apk add --no-cache chromium --repository https://dl-cdn.alpinelinux.org/alpine/v3.11/community/ \
+  apk add --no-cache chromium --repository https://dl-cdn.alpinelinux.org/alpine/v3.11/community/ && \
   echo "**** application tweaks ****" && \
   sed -i \
     's#^Exec=.*#Exec=/usr/local/bin/wrapped-chromium#g' \
