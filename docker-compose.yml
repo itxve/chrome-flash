@@ -1,8 +1,7 @@
 version: "3"
 services:
   webtop:
-    build:
-      dockerfile: Dockerfile.aarch64
+    build: .
     container_name: local-webtop
     security_opt:
       - seccomp:unconfined #optional
