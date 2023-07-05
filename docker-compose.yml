@@ -1,8 +1,10 @@
 version: "3"
 services:
   webtop:
+    # image: webtop-local-webtop
     build: .
-    container_name: local-webtop
+    image: xfce-flash-webtop
+    container_name: local-bb-xfce-webtop
     security_opt:
       - seccomp:unconfined #optional
     environment:
@@ -12,12 +14,12 @@ services:
       - SUBFOLDER=/ #optional
       - TITLE=Webtop #optional
     volumes:
-      - ./:/config
+      - ./mt/:/config
       - /var/run/docker.sock:/var/run/docker.sock #optional
     ports:
       - 9900:3000
-      # - 8001:3001
+      - 9001:3001
     # devices:
       # - /dev/dri:/dev/dri #optional
-    shm_size: "1gb" #optional
+    shm_size: "2gb" #optional
     restart: unless-stopped
