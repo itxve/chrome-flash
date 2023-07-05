@@ -1,6 +1,8 @@
-## Image a bit big
+# chrome-flash
 
-The mirror image is a bit big
+The base image is the powerful `lscr.io/linuxserver/webtop:ubuntu-xfce` which which targets a Ubuntu desktop in Docker accessible in browser 。
+
+`The mirror image is a bit big`
 
 ## Usage
 
