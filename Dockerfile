@@ -20,7 +20,6 @@ RUN \
 	ln -s /player/flashplayerdebugger /usr/bin/flashplayerdebugger && \
   tar -xf /tmp/firefox-53.0.3.tar.bz2 && \
 	ln -s /firefox/firefox /usr/bin/firefox && \
-	ln -s /firefox/firefox /config/Desktop/firefox && \
 	echo "**** install deps ****" && \
 	apt-get install -qy --no-install-recommends \
 		x11-apps \
@@ -36,3 +35,7 @@ RUN \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
+
+# replace browser
+COPY ./firefox.desktop /usr/share/applications/xfce4-web-browser.desktop
+

@@ -1,10 +1,9 @@
 version: "3"
 services:
   webtop:
-    # image: webtop-local-webtop
     build: .
     image: ghcr.io/itxve/chrome-flash
-    container_name: local-bb-xfce-webtop
+    container_name: local-chrome-flash
     security_opt:
       - seccomp:unconfined #optional
     environment:
@@ -14,12 +13,11 @@ services:
       - SUBFOLDER=/ #optional
       - TITLE=Webtop #optional
     volumes:
-      - ./mt/:/config
       - /var/run/docker.sock:/var/run/docker.sock #optional
     ports:
       - 9900:3000
       - 9001:3001
     # devices:
       # - /dev/dri:/dev/dri #optional
-    shm_size: "2gb" #optional
+    shm_size: "1gb" #optional
     restart: unless-stopped
