@@ -10,7 +10,13 @@ see `docker-compose.yml`
 
 copy `firefox.desktop` to `Desktop/`
 
+## About Custom Base Image
+
+[kasmweb](https://www.kasmweb.com/docs/latest/how_to/building_images.html)
+
 ## References
+
+[Blog](https://jchprj.medium.com/play-adobe-flash-after-eol-in-browser-5042abc6e4b7)
 
 [Play-Adobe-Flash-After-EOL](https://github.com/jchprj/Play-Adobe-Flash-After-EOL)
 

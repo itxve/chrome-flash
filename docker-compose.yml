@@ -3,7 +3,7 @@ services:
   webtop:
     # image: webtop-local-webtop
     build: .
-    image: xfce-flash-webtop
+    image: ghcr.io/itxve/chrome-flash
     container_name: local-bb-xfce-webtop
     security_opt:
       - seccomp:unconfined #optional
