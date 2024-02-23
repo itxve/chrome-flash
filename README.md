@@ -8,6 +8,12 @@ The base image is the powerful `lscr.io/linuxserver/webtop:ubuntu-xfce` which wh
 [docker-webtop](https://docs.linuxserver.io/images/docker-webtop)
 
 
+### 存在的问题
+因为是老版本的浏览器所有不支持HTML5播放器
+
+`声音`需要在控制面板那个audio 打开
+
+
 
 ### 使用
 - 下载 `docker-compose.yml` then `docker compose up`
