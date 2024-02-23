@@ -10,6 +10,8 @@ The base image is the powerful `lscr.io/linuxserver/webtop:ubuntu-xfce` which wh
 ### 使用
 - 下载 `docker-compose.yml` then `docker compose up`
 
+访问 http://localhost:9900/
+
 
 ### 已`腾讯的洛克王国`为例子
 ![洛克王国](./img/roco.jpg)
