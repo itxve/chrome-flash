@@ -1,7 +1,6 @@
 version: "3"
 services:
   webtop:
-    build: .
     image: ghcr.io/itxve/chrome-flash
     container_name: local-chrome-flash
     security_opt:
